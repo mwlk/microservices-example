@@ -29,5 +29,11 @@ namespace TiendaServicios.api.author.Controllers
         {
             return await _mediator.Send(new Consult.AuthorList());
         }
+
+        [HttpGet("{uid}")]
+        public async Task<ActionResult<Author>> GetBookAuthorFiltered(string uid)
+        {
+            return await _mediator.Send(new FilterConsult.AuthorUnique { AuthorGuid = uid });
+        }
     }
 }
