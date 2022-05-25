@@ -1,7 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using TiendaServicios.api.author.Application;
+using TiendaServicios.api.author.Models;
 
 namespace TiendaServicios.api.author.Controllers
 {
@@ -20,6 +22,12 @@ namespace TiendaServicios.api.author.Controllers
         public async Task<ActionResult<Unit>> Create(New.Ejecuta data)
         {
             return await _mediator.Send(data);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<Author>>> GetAuthors()
+        {
+            return await _mediator.Send(new Consult.AuthorList());
         }
     }
 }
