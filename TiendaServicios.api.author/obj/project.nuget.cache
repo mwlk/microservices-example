@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "aDZC0TCffbVaEmt/Qdjdq8Q0IuHiRHdwctssuG0p1pJpNDjVgW7lNP2H1mVGIA8CDm8dNfIs+oFdPGqcGrDldw==",
+  "dgSpecHash": "+BxlaSbOf2JE1p994s3Qh+LcWD60+wX3EJTvR2/2iQc0QrSIGt3vPWT8a2SOHj95L4fHfUsq3sNVb7oxiydavA==",
   "success": true,
   "projectFilePath": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.author\\TiendaServicios.api.author.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\fluentvalidation\\11.0.1\\fluentvalidation.11.0.1.nupkg.sha512",
+    "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.0.1\\fluentvalidation.aspnetcore.11.0.1.nupkg.sha512",
+    "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.1\\fluentvalidation.dependencyinjectionextensions.11.0.1.nupkg.sha512",
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

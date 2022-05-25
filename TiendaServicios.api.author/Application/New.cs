@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,6 +15,16 @@ namespace TiendaServicios.api.author.Application
             public string Nombre { get; set; }
             public string Apellido { get; set; }
             public DateTime? FechaNacimiento { get; set; }
+        }
+
+        public class ExecuteValidations : AbstractValidator<Ejecuta>
+        {
+            public ExecuteValidations()
+            {
+                RuleFor(x => x.Nombre).NotEmpty().MinimumLength(3);
+                RuleFor(x => x.Apellido).NotEmpty();
+                
+            }
         }
 
         public class Manejador : IRequestHandler<Ejecuta>
@@ -33,7 +44,7 @@ namespace TiendaServicios.api.author.Application
                     Name = request.Nombre,
                     LastName = request.Apellido,
                     BirthDate = request.FechaNacimiento,
-                    AuthorGuid = Convert.ToString(Guid.NewGuid()) 
+                    AuthorGuid = Convert.ToString(Guid.NewGuid())
                 };
 
                 await _context.BookAuthor.AddAsync(bookAuthor);

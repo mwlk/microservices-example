@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,7 +32,8 @@ namespace TiendaServicios.api.author
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            // se ejecuta una unica vez, busca a todos los que implementen AbstractValidator
+            services.AddControllers().AddFluentValidation(conf => conf.RegisterValidatorsFromAssemblyContaining<New>());
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TiendaServicios.api.author", Version = "v1" });
