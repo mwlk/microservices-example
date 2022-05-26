@@ -46,6 +46,9 @@ namespace TiendaServicios.api.author
 
             // esta linea se hace una sola vez
             services.AddMediatR(typeof(New.Manejador).Assembly);
+
+            //configure automapper
+            services.AddAutoMapper(typeof(Consult.Manejador));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
