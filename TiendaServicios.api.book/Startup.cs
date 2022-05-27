@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -10,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TiendaServicios.api.book.Persistence;
 
 namespace TiendaServicios.api.book
 {
@@ -30,6 +32,10 @@ namespace TiendaServicios.api.book
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TiendaServicios.api.book", Version = "v1" });
+            });
+
+            services.AddDbContext<LibraryContext>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("connect"));
             });
         }
 
