@@ -1,3 +1,5 @@
+using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TiendaServicios.api.book.Application;
 using TiendaServicios.api.book.Persistence;
 
 namespace TiendaServicios.api.book
@@ -28,15 +31,21 @@ namespace TiendaServicios.api.book
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation(config => config.RegisterValidatorsFromAssemblyContaining<New>());
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TiendaServicios.api.book", Version = "v1" });
             });
 
-            services.AddDbContext<LibraryContext>(options => {
+            services.AddDbContext<LibraryContext>(options =>
+            {
                 options.UseSqlServer(Configuration.GetConnectionString("connect"));
             });
+
+            services.AddMediatR(typeof(New.Manejador).Assembly);
+
+            services.AddAutoMapper(typeof(Search.Ejecuta));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
