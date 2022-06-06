@@ -46,4 +46,5 @@ C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.Api.Shop\bin\
 C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.Api.Shop\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.Api.Shop\bin\Debug\net5.0\MySqlConnector.dll
 C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.Api.Shop\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
-C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.Api.Shop\obj\Debug\net5.0\refint\TiendaServicios.Api.Shop.dll
+C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.Api.Shop\bin\Debug\net5.0\ref\TiendaServicios.Api.Shop.dll
+C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.Api.Shop\obj\Debug\net5.0\staticwebassets\TiendaServicios.Api.Shop.StaticWebAssets.xml

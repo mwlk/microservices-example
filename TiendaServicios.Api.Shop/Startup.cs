@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TiendaServicios.Api.Shop.Application;
 using TiendaServicios.Api.Shop.Persistence;
 
 namespace TiendaServicios.Api.Shop
@@ -29,13 +31,16 @@ namespace TiendaServicios.Api.Shop
         {
 
             services.AddControllers();
-            services.AddDbContext<ContextShopping>(options => {
+            services.AddDbContext<ContextShopping>(options =>
+            {
                 options.UseMySql(Configuration.GetConnectionString("DatabaseConnection"), new MySqlServerVersion(new Version()));
             });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TiendaServicios.Api.Shop", Version = "v1" });
             });
+
+            services.AddMediatR(typeof(Nuevo.Manejador).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
