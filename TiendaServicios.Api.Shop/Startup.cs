@@ -1,19 +1,16 @@
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using TiendaServicios.Api.Shop.Application;
 using TiendaServicios.Api.Shop.Persistence;
+using TiendaServicios.Api.Shop.RemoteInterface;
+using TiendaServicios.Api.Shop.RemoteServices;
 
 namespace TiendaServicios.Api.Shop
 {
@@ -29,6 +26,7 @@ namespace TiendaServicios.Api.Shop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ILibroService, LibroService>();
 
             services.AddControllers();
             services.AddDbContext<ContextShopping>(options =>
@@ -41,6 +39,11 @@ namespace TiendaServicios.Api.Shop
             });
 
             services.AddMediatR(typeof(Nuevo.Manejador).Assembly);
+
+            services.AddHttpClient("Libros", config =>
+            {
+                config.BaseAddress = new Uri(Configuration["Services:Libros"]);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
