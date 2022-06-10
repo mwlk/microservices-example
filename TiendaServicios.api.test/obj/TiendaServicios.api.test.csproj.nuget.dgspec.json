@@ -4,14 +4,14 @@
     "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.test\\TiendaServicios.api.test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.test\\TiendaServicios.api.test.csproj": {
+    "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.book\\TiendaServicios.api.book.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.test\\TiendaServicios.api.test.csproj",
-        "projectName": "TiendaServicios.api.test",
-        "projectPath": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.test\\TiendaServicios.api.test.csproj",
+        "projectUniqueName": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.book\\TiendaServicios.api.book.csproj",
+        "projectName": "TiendaServicios.api.book",
+        "projectPath": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.book\\TiendaServicios.api.book.csproj",
         "packagesPath": "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.test\\obj\\",
+        "outputPath": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.book\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -46,9 +46,122 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.test\\TiendaServicios.api.test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.test\\TiendaServicios.api.test.csproj",
+        "projectName": "TiendaServicios.api.test",
+        "projectPath": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.test\\TiendaServicios.api.test.csproj",
+        "packagesPath": "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mirko.MIRKO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.book\\TiendaServicios.api.book.csproj": {
+                "projectPath": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.book\\TiendaServicios.api.book.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "GenFu": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.9.4, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.1, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
