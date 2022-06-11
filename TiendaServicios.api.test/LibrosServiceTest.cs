@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using TiendaServicios.api.book.Application;
-using TiendaServicios.api.book.Application.DTO;
 using TiendaServicios.api.book.Models;
 using TiendaServicios.api.book.Persistence;
 using Xunit;
@@ -50,12 +49,26 @@ namespace TiendaServicios.api.test
         }
 
         [Fact]
-        public void GetLibros()
+        public async void GetLibros()
         {
-            var mockContext = BuildContext();
-            var mockMapper = new Mock<IMapper>();
+            System.Diagnostics.Debugger.Launch();
 
-            Search.Manejador manejador = new Search.Manejador(mockContext.Object, mockMapper.Object);
+
+            var mockContext = BuildContext();
+            var mapConfig = new MapperConfiguration(config =>
+            {
+                config.AddProfile(new MappingTest());
+            });
+
+            var mockMapper = mapConfig.CreateMapper();
+
+            Search.Manejador manejador = new Search.Manejador(mockContext.Object, mockMapper);
+
+            Search.Ejecuta request = new Search.Ejecuta();
+
+            var listado = await manejador.Handle(request, new CancellationToken());
+
+            Assert.True(listado.Any());
         }
     }
 }
