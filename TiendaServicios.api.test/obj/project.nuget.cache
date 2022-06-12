@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vFkTVXtOY+d2p7QjiGc95IwGABBm1p7aFPVWurX0zyapyce5qvwOKk63uTDe8E3kw+Glu62qyfpkJbhFPq43sw==",
+  "dgSpecHash": "U5y+qXfJHSVC8RVBMtEeikwP4KnZiZg2dGewDkN6/pzTzHtr+lac8YM5NHrEZxxaTImqPvrPq2nqqBlSUY6fwA==",
   "success": true,
   "projectFilePath": "C:\\Users\\mirko.MIRKO\\Desktop\\VS\\microservices\\.net\\TiendaServicios.api.test\\TiendaServicios.api.test.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.17\\microsoft.entityframeworkcore.5.0.17.nupkg.sha512",
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.17\\microsoft.entityframeworkcore.abstractions.5.0.17.nupkg.sha512",
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.17\\microsoft.entityframeworkcore.analyzers.5.0.17.nupkg.sha512",
+    "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.17\\microsoft.entityframeworkcore.inmemory.5.0.17.nupkg.sha512",
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.17\\microsoft.entityframeworkcore.relational.5.0.17.nupkg.sha512",
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.17\\microsoft.entityframeworkcore.sqlserver.5.0.17.nupkg.sha512",
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

@@ -93,5 +93,28 @@ namespace TiendaServicios.api.test
             Assert.NotNull(result);
             Assert.True(result.LibraryId == Guid.Empty);
         }
+
+        [Fact]
+        public async void SaveBook()
+        {
+            System.Diagnostics.Debugger.Launch();
+
+            var options = new DbContextOptionsBuilder<LibraryContext>()
+                                   .UseInMemoryDatabase(databaseName: "booksDatabase")
+                                   .Options;
+
+            var context = new LibraryContext(options);
+
+            var request = new New.Execute();
+            request.Title = "Libro de microservicios";
+            request.BookAuthor = Guid.Empty;
+            request.Publication = DateTime.Now;
+
+            var handler = new New.Manejador(context);
+
+            var insert = await handler.Handle(request, new CancellationToken());
+
+            Assert.True(insert != null);
+        }
     }
 }

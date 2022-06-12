@@ -155,3 +155,4 @@ C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.api.test\bin\
 C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.api.test\bin\Debug\net5.0\Castle.Core.dll
 C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.api.test\bin\Debug\net5.0\Moq.dll
 C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.api.test\bin\Debug\net5.0\GenFu.dll
+C:\Users\mirko.MIRKO\Desktop\VS\microservices\.net\TiendaServicios.api.test\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
