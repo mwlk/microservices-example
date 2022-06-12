@@ -42,6 +42,8 @@ namespace TiendaServicios.api.test
             dbSet.As<IAsyncEnumerable<Library>>().Setup(x => x.GetAsyncEnumerator(new CancellationToken()))
                                                  .Returns(new AsyncEnumerator<Library>(testData.GetEnumerator()));
 
+            dbSet.As<IQueryable<Library>>().Setup(x => x.Provider).Returns(new AsyncQueryProvider<Library>(testData.Provider));
+
             var context = new Mock<LibraryContext>();
             context.Setup(x => x.Libreria).Returns(dbSet.Object);
 
@@ -69,6 +71,27 @@ namespace TiendaServicios.api.test
             var listado = await manejador.Handle(request, new CancellationToken());
 
             Assert.True(listado.Any());
+        }
+
+        [Fact]
+        public async void GetLibroById()
+        {
+            System.Diagnostics.Debugger.Launch();
+
+            var mockContext = BuildContext();
+
+            var mapConfig = new MapperConfiguration(config => config.AddProfile(new MappingTest()));
+
+            var mockMapper = mapConfig.CreateMapper();
+
+            var request = new FilteredSearch.UniqueBook();
+            request.BookId = Guid.Empty;
+
+            var manejador = new FilteredSearch.Handler(mockContext.Object, mockMapper);
+            var result = await manejador.Handle(request, new CancellationToken());
+
+            Assert.NotNull(result);
+            Assert.True(result.LibraryId == Guid.Empty);
         }
     }
 }
